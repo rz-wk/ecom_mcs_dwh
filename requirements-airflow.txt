@@ -1,0 +1,7 @@
+apache-airflow==3.3.1
+astronomer-cosmos==1.15.1
+apache-airflow-providers-postgres==7.0.2
+apache-airflow-providers-openlineage==2.20.1
+pendulum==3.2.0
+
+

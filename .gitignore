@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.vscode/
+.dbeaver
+.project
+.settings
+.ipynb_checkpoints
+_dbeaver
+_drafts/
+_materials
+_ТЗ
+_config.py
+_builder.ipynb
+config/config_local.py
