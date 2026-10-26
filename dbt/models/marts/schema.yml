@@ -1,0 +1,277 @@
+version: 2
+
+models:
+
+  - name: mart_funnel
+
+    description: >
+      Основная аналитическая витрина воронки.
+      Grain: дата * категория * бренд * funnel stage.
+      Содержит количество событий каждого этапа
+      и выручку для purchase.
+
+    columns:
+
+      - name: event_date
+        description: Дата событий.
+        tests:
+          - not_null
+
+      - name: category_id
+        description: Идентификатор категории.
+        tests:
+          - not_null        
+
+      # - name: brand
+      #   description: Бренд товара.
+      #   tests:
+      #     - not_null
+
+      - name: funnel_stage
+        description: Этап воронки.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - view
+                  - cart
+                  - remove_from_cart
+                  - purchase
+
+      - name: stage_count
+        description: Количество событий этапа.
+        tests:
+          - not_null
+
+      - name: revenue
+        description: Выручка; ненулевая только для purchase.
+        tests:
+          - not_null
+
+  - name: mart_sessions
+    description: >
+      Аналитическая витрина пользовательских сессий.
+      Grain: 1 session.
+
+    columns:
+
+      - name: session_id
+        description: Детерминированный идентификатор сессии.
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: Идентификатор пользователя.
+        tests:
+          - not_null
+
+      - name: session_start
+        description: Начало сессии.
+        tests:
+          - not_null
+
+      - name: session_end
+        description: Окончание сессии.
+        tests:
+          - not_null
+
+      - name: session_duration_seconds
+        description: Продолжительность сессии в секундах.
+        tests:
+          - not_null
+
+      - name: events_count
+        description: Количество событий в сессии.
+        tests:
+          - not_null
+
+      - name: views_count
+        description: Количество просмотров.
+        tests:
+          - not_null
+
+      - name: carts_count
+        description: Количество добавлений в корзину.
+        tests:
+          - not_null
+
+      - name: remove_from_cart_count
+        description: Количество удалений из корзины.
+        tests:
+          - not_null
+
+      - name: purchases_count
+        description: Количество покупок.
+        tests:
+          - not_null
+
+      - name: products_count
+        description: Количество уникальных товаров в сессии.
+        tests:
+          - not_null
+
+      - name: purchase_amount
+        description: Сумма покупок в рамках сессии.
+        tests:
+          - not_null
+
+      - name: session_date
+        description: Дата начала сессии.
+        tests:
+          - not_null
+
+  - name: mart_products
+
+    description: >
+      Дневная продуктовая витрина.
+      Grain: дата * product.
+
+    columns:
+
+      - name: event_date
+        description: Дата событий.
+        tests:
+          - not_null
+
+      - name: product_id
+        description: Идентификатор товара.
+        tests:
+          - not_null
+
+      - name: category_id
+        description: Идентификатор категории.
+        tests:
+          - not_null
+
+      # - name: brand
+      #   description: Бренд товара.
+      #   tests:
+      #     - not_null:
+
+      - name: view_count
+        description: Количество просмотров.
+        tests:
+          - not_null
+
+      - name: cart_count
+        description: Количество добавлений в корзину.
+        tests:
+          - not_null
+
+      - name: remove_from_cart_count
+        description: Количество удалений из корзины.
+        tests:
+          - not_null
+
+      - name: purchase_count
+        description: Количество покупок.
+        tests:
+          - not_null
+
+      - name: revenue
+        description: Выручка.
+        tests:
+          - not_null
+
+  - name: mart_users
+
+    description: >
+      Дневная пользовательская витрина.
+      Grain: дата * user.
+
+    columns:
+
+      - name: event_date
+        description: Дата событий.
+        tests:
+          - not_null
+
+      - name: user_id
+        description: Идентификатор пользователя.
+        tests:
+          - not_null
+
+      - name: event_count
+        description: Количество событий.
+        tests:
+          - not_null
+
+      - name: view_count
+        description: Количество просмотров.
+        tests:
+          - not_null
+
+      - name: cart_count
+        description: Количество добавлений в корзину.
+        tests:
+          - not_null
+
+      - name: remove_from_cart_count
+        description: Количество удалений из корзины.
+        tests:
+          - not_null
+
+      - name: purchase_count
+        description: Количество покупок.
+        tests:
+          - not_null
+
+      - name: revenue
+        description: Выручка пользователя за день.
+        tests:
+          - not_null
+
+      - name: source_session_count
+        description: Количество уникальных сессий пользователя.
+        tests:
+          - not_null
+
+  - name: mart_sales
+
+    description: >
+      Дневная витрина продаж.
+      Grain: дата * категория * бренд.
+
+    columns:
+    
+      - name: purchase_date
+        description: Дата покупки.
+        tests:
+          - not_null
+
+      - name: category_id
+        description: Идентификатор категории.
+        tests:
+          - not_null
+
+      # - name: brand
+      #   description: Бренд товара.
+      #   tests:
+      #     - not_null:
+
+      - name: purchase_count
+        description: Количество покупок.
+        tests:
+          - not_null
+
+      - name: purchasing_users
+        description: Количество уникальных покупателей.
+        tests:
+          - not_null
+
+      - name: purchased_products
+        description: Количество уникальных купленных товаров.
+        tests:
+          - not_null
+
+      - name: revenue
+        description: Выручка.
+        tests:
+          - not_null
+
+      - name: avg_purchase_price
+        description: Средняя цена покупки.
+        tests:
+          - not_null

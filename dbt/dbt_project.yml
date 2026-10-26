@@ -1,0 +1,31 @@
+name: 'ecom_mcs_dwh'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ecom_mcs_dwh'
+
+model-paths:
+  - models
+
+models:
+  ecom_mcs_dwh:
+
+    facts:
+      +schema: ecom_mcs_dwh_core
+
+      # _draft:
+        # +enabled: false
+        
+      # _backup:
+        # +enabled: false
+
+      fact_sessions:
+        +materialized: incremental
+
+    dimensions:
+      +schema: ecom_mcs_dwh_core
+
+    marts:
+      +schema: ecom_mcs_dwh_marts
+
+

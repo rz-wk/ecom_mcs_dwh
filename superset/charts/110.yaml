@@ -1,0 +1,73 @@
+slice_name: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0432 \u043A\
+  \u043E\u0440\u0437\u0438\u043D\u0443"
+description: 'KPI: Total Carts'
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 24__table
+  viz_type: big_number
+  matrixify_enable: false
+  matrixify_mode_columns: disabled
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_all_sort_by_columns: a_to_z
+  matrixify_topn_order_columns: true
+  matrixify_show_column_headers: true
+  matrixify_fit_columns_dynamically: true
+  matrixify_mode_rows: disabled
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_all_sort_by_rows: a_to_z
+  matrixify_topn_order_rows: true
+  matrixify_show_row_labels: true
+  matrixify_row_height: 300
+  matrixify_charts_per_row: 4
+  matrixify_cell_title_template: ''
+  x_axis: event_date
+  time_grain_sqla: P1D
+  aggregation: LAST_VALUE
+  metric: sum_cart_count
+  adhoc_filters:
+  - clause: WHERE
+    subject: event_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  show_timestamp: false
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  color_picker:
+    r: 0
+    g: 122
+    b: 135
+    a: 1
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  subtitle_font_size: 0.15
+  show_metric_name: false
+  metric_name_font_size: 0.15
+  show_x_axis: false
+  show_x_axis_min_max_labels: false
+  show_y_axis: false
+  show_y_axis_min_max_labels: false
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  force_timestamp_formatting: false
+  rolling_type: None
+  extra_form_data: {}
+  dashboards:
+  - 10
+query_context: '{"datasource":{"id":24,"type":"table"},"force":false,"queries":[{"filters":[{"col":"event_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1D","columnType":"BASE_AXIS","sqlExpression":"event_date","label":"event_date","expressionType":"SQL","isColumnReference":true}],"metrics":["sum_cart_count"],"annotation_layers":[],"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"pivot","options":{"index":["event_date"],"columns":[],"aggregates":{"sum_cart_count":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"24__table","viz_type":"big_number","matrixify_enable":false,"matrixify_mode_columns":"disabled","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_all_sort_by_columns":"a_to_z","matrixify_topn_order_columns":true,"matrixify_show_column_headers":true,"matrixify_fit_columns_dynamically":true,"matrixify_mode_rows":"disabled","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_all_sort_by_rows":"a_to_z","matrixify_topn_order_rows":true,"matrixify_show_row_labels":true,"matrixify_row_height":300,"matrixify_charts_per_row":4,"matrixify_cell_title_template":"","x_axis":"event_date","time_grain_sqla":"P1D","aggregation":"LAST_VALUE","metric":"sum_cart_count","adhoc_filters":[{"clause":"WHERE","subject":"event_date","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"show_timestamp":false,"show_trend_line":true,"start_y_axis_at_zero":true,"color_picker":{"r":0,"g":122,"b":135,"a":1},"header_font_size":0.4,"subheader_font_size":0.15,"subtitle_font_size":0.15,"show_metric_name":false,"metric_name_font_size":0.15,"show_x_axis":false,"show_x_axis_min_max_labels":false,"show_y_axis":false,"show_y_axis_min_max_labels":false,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","force_timestamp_formatting":false,"rolling_type":"None","extra_form_data":{},"dashboards":[10],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: ba63728d-5e80-44f3-b14b-18e49082acdd
+version: 1.0.0
+dataset_uuid: a583f928-1b07-4551-8581-661b93059dcd

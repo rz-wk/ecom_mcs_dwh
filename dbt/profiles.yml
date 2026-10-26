@@ -1,0 +1,18 @@
+ecom_mcs_dwh:
+  target: local
+
+  outputs:
+    local:
+      type: clickhouse
+      schema: ecom_mcs_dwh_marts # имя базы данных
+
+      host: localhost # или IP удаленного сервера
+      port: 8123 # 9005 (нативный) или 8443 (SSL), 8123/8443 для HTTP
+
+      user: ''
+      password: ''
+
+      secure: false # True, если используется SSL
+      verify: false
+      threads: 4
+      send_receive_timeout: 600

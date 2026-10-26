@@ -1,0 +1,29 @@
+'''
+Конфиденциальные настройки проекта.
+
+Содержит учетные данные и другие параметры, зависящие
+от конкретного окружения.
+'''
+
+_conf = {
+    'databases': {
+        'postgres_ods': {
+            'user': '',
+            'password': '',
+        },
+
+        'clickhouse_core': {
+            'user': '',
+            'password': '',
+        },
+
+        'clickhouse_marts': {
+            'user': '',
+            'password': '',
+        },
+    },
+    'om': {
+        # JWT-токен бота ingestion (тот же, что в airflow.cfg [openlineage])
+        'token': '',
+    },
+}

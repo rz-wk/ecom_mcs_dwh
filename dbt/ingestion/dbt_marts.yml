@@ -1,0 +1,21 @@
+source:
+  type: dbt
+  serviceName: clickhouse_marts
+  sourceConfig:
+    config:
+      type: DBT
+      dbtConfigSource:
+        dbtConfigType: local
+        dbtManifestFilePath: //ecom_mcs_dwh/dbt/target/manifest.json
+        dbtRunResultsFilePath: //ecom_mcs_dwh/dbt/target/process_dbt.dbt_test/run_results.json
+
+sink:
+  type: metadata-rest
+  config: {}
+
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: http://127.0.0.1:8585/api
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: ""

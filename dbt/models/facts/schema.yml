@@ -1,0 +1,72 @@
+version: 2
+
+sources:
+
+  - name: core
+    database: ecom_mcs_dwh_core
+    schema: ecom_mcs_dwh_core
+
+    tables:
+
+      - name: fact_events
+
+        columns:
+
+          - name: event_id
+            tests:
+              - not_null
+              - unique
+
+          - name: event_time
+            tests:
+              - not_null
+
+          - name: user_id
+            tests:
+              - not_null
+
+          - name: event_type
+            tests:
+              - not_null
+
+models:
+
+  - name: fact_sessions
+
+    description: >
+      Реконструированные пользовательские сессии,
+      построенные из атомарных событий fact_events
+      с таймаутом 30 минут.
+
+    columns:
+
+      - name: session_id
+        description: Детерминированный идентификатор сессии.
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: Идентификатор пользователя.
+        tests:
+          - not_null
+
+      - name: session_start
+        description: Время первого события сессии.
+        tests:
+          - not_null
+
+      - name: session_end
+        description: Время последнего события сессии.
+        tests:
+          - not_null
+
+      - name: events_count
+        description: Количество событий в сессии.
+        tests:
+          - not_null
+
+      - name: session_duration_seconds
+        description: Продолжительность сессии в секундах.
+        tests:
+          - not_null

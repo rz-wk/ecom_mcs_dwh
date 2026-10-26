@@ -1,0 +1,104 @@
+slice_name: "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"
+description: 'KPI: Total Users'
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 25__table
+  viz_type: big_number
+  slice_id: 107
+  matrixify_enable: false
+  matrixify_mode_columns: disabled
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_all_sort_by_columns: a_to_z
+  matrixify_topn_order_columns: true
+  matrixify_show_column_headers: true
+  matrixify_fit_columns_dynamically: true
+  matrixify_mode_rows: disabled
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_all_sort_by_rows: a_to_z
+  matrixify_topn_order_rows: true
+  matrixify_show_row_labels: true
+  matrixify_row_height: 300
+  matrixify_charts_per_row: 4
+  matrixify_cell_title_template: ''
+  x_axis: event_date
+  time_grain_sqla: P1D
+  aggregation: LAST_VALUE
+  metric: count_users
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: event_date
+  show_timestamp: false
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  subtitle: "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E"
+  subtitle_font_size: 0.15
+  show_metric_name: false
+  metric_name_font_size: 0.15
+  show_x_axis: false
+  show_x_axis_min_max_labels: false
+  show_y_axis: false
+  show_y_axis_min_max_labels: false
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  force_timestamp_formatting: false
+  rolling_type: None
+  extra_form_data: {}
+  dashboards:
+  - 10
+query_context: "{\"datasource\":{\"id\":25,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[{\"col\":\"event_date\",\"op\":\"TEMPORAL_RANGE\",\"val\"\
+  :\"No filter\"}],\"extras\":{\"time_grain_sqla\":\"P1D\",\"having\":\"\",\"where\"\
+  :\"\"},\"applied_time_extras\":{},\"columns\":[{\"timeGrain\":\"P1D\",\"columnType\"\
+  :\"BASE_AXIS\",\"sqlExpression\":\"event_date\",\"label\":\"event_date\",\"expressionType\"\
+  :\"SQL\",\"isColumnReference\":true}],\"metrics\":[\"count_users\"],\"annotation_layers\"\
+  :[],\"series_limit\":0,\"group_others_when_limit_reached\":false,\"order_desc\"\
+  :true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"post_processing\"\
+  :[{\"operation\":\"pivot\",\"options\":{\"index\":[\"event_date\"],\"columns\":[],\"\
+  aggregates\":{\"count_users\":{\"operator\":\"mean\"}},\"drop_missing_columns\"\
+  :true}},{\"operation\":\"flatten\"}]}],\"form_data\":{\"datasource\":\"25__table\"\
+  ,\"viz_type\":\"big_number\",\"slice_id\":107,\"matrixify_enable\":false,\"matrixify_mode_columns\"\
+  :\"disabled\",\"matrixify_dimension_selection_mode_columns\":\"members\",\"matrixify_dimension_columns\"\
+  :{\"dimension\":\"\",\"values\":[]},\"matrixify_topn_value_columns\":10,\"matrixify_all_sort_by_columns\"\
+  :\"a_to_z\",\"matrixify_topn_order_columns\":true,\"matrixify_show_column_headers\"\
+  :true,\"matrixify_fit_columns_dynamically\":true,\"matrixify_mode_rows\":\"disabled\"\
+  ,\"matrixify_dimension_selection_mode_rows\":\"members\",\"matrixify_dimension_rows\"\
+  :{\"dimension\":\"\",\"values\":[]},\"matrixify_topn_value_rows\":10,\"matrixify_all_sort_by_rows\"\
+  :\"a_to_z\",\"matrixify_topn_order_rows\":true,\"matrixify_show_row_labels\":true,\"\
+  matrixify_row_height\":300,\"matrixify_charts_per_row\":4,\"matrixify_cell_title_template\"\
+  :\"\",\"x_axis\":\"event_date\",\"time_grain_sqla\":\"P1D\",\"aggregation\":\"LAST_VALUE\"\
+  ,\"metric\":\"count_users\",\"adhoc_filters\":[{\"clause\":\"WHERE\",\"comparator\"\
+  :\"No filter\",\"expressionType\":\"SIMPLE\",\"operator\":\"TEMPORAL_RANGE\",\"\
+  subject\":\"event_date\"}],\"show_timestamp\":false,\"show_trend_line\":true,\"\
+  start_y_axis_at_zero\":true,\"color_picker\":{\"a\":1,\"b\":135,\"g\":122,\"r\"\
+  :0},\"header_font_size\":0.4,\"subheader_font_size\":0.15,\"subtitle\":\"\u041A\u043E\
+  \u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E\",\"subtitle_font_size\":0.15,\"\
+  show_metric_name\":false,\"metric_name_font_size\":0.15,\"show_x_axis\":false,\"\
+  show_x_axis_min_max_labels\":false,\"show_y_axis\":false,\"show_y_axis_min_max_labels\"\
+  :false,\"y_axis_format\":\"SMART_NUMBER\",\"time_format\":\"smart_date\",\"force_timestamp_formatting\"\
+  :false,\"rolling_type\":\"None\",\"extra_form_data\":{},\"dashboards\":[10],\"force\"\
+  :false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\":\"\
+  json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: b60864ed-65cb-4903-83e2-65e019e5bdc2
+version: 1.0.0
+dataset_uuid: d538b97c-c307-4a25-bb18-a82d56609f10

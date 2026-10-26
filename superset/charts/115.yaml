@@ -1,0 +1,93 @@
+slice_name: "\u041A\u043E\u043D\u0432\u0435\u0440\u0441\u0438\u044F"
+description: Conversion
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 24__table
+  viz_type: echarts_timeseries_line
+  slice_id: 115
+  matrixify_enable: false
+  matrixify_mode_columns: disabled
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_all_sort_by_columns: a_to_z
+  matrixify_topn_order_columns: true
+  matrixify_show_column_headers: true
+  matrixify_fit_columns_dynamically: true
+  matrixify_mode_rows: disabled
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_all_sort_by_rows: a_to_z
+  matrixify_topn_order_rows: true
+  matrixify_show_row_labels: true
+  matrixify_row_height: 300
+  matrixify_charts_per_row: 4
+  matrixify_cell_title_template: ''
+  x_axis: event_date
+  time_grain_sqla: P1D
+  metrics:
+  - view_to_cart_conversion
+  - view_to_purchase_conversion
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: event_date
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastEnabled: false
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title: ''
+  x_axis_title_margin: 0
+  y_axis_title: ''
+  y_axis_title_margin: 0
+  y_axis_title_position: Left
+  sort_series_type: sum
+  sort_series_ascending: false
+  color_scheme: supersetColors
+  show_value: false
+  area: false
+  markerEnabled: false
+  zoomable: false
+  minorTicks: false
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  xAxisLabelRotation: 0
+  xAxisLabelInterval: auto
+  force_max_interval: false
+  rich_tooltip: true
+  showTooltipTotal: true
+  showTooltipPercentage: false
+  tooltipSortByMetric: false
+  tooltipTimeFormat: smart_date
+  y_axis_format: .2%
+  logAxis: false
+  minorSplitLine: false
+  truncateXAxis: true
+  truncateYAxis: false
+  echart_options: '{}'
+  extra_form_data: {}
+  dashboards:
+  - 10
+query_context: '{"datasource":{"id":24,"type":"table"},"force":false,"queries":[{"filters":[{"col":"event_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1D","columnType":"BASE_AXIS","sqlExpression":"event_date","label":"event_date","expressionType":"SQL","isColumnReference":true}],"metrics":["view_to_cart_conversion","view_to_purchase_conversion"],"orderby":[["view_to_cart_conversion",false]],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["event_date"],"columns":[],"aggregates":{"view_to_cart_conversion":{"operator":"mean"},"view_to_purchase_conversion":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"24__table","viz_type":"echarts_timeseries_line","slice_id":115,"matrixify_enable":false,"matrixify_mode_columns":"disabled","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_all_sort_by_columns":"a_to_z","matrixify_topn_order_columns":true,"matrixify_show_column_headers":true,"matrixify_fit_columns_dynamically":true,"matrixify_mode_rows":"disabled","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_all_sort_by_rows":"a_to_z","matrixify_topn_order_rows":true,"matrixify_show_row_labels":true,"matrixify_row_height":300,"matrixify_charts_per_row":4,"matrixify_cell_title_template":"","x_axis":"event_date","time_grain_sqla":"P1D","metrics":["view_to_cart_conversion","view_to_purchase_conversion"],"groupby":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","expressionType":"SIMPLE","operator":"TEMPORAL_RANGE","subject":"event_date"}],"row_limit":10000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastEnabled":false,"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title":"","x_axis_title_margin":0,"y_axis_title":"","y_axis_title_margin":0,"y_axis_title_position":"Left","sort_series_type":"sum","sort_series_ascending":false,"color_scheme":"supersetColors","show_value":false,"area":false,"markerEnabled":false,"zoomable":false,"minorTicks":false,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","xAxisLabelRotation":0,"xAxisLabelInterval":"auto","force_max_interval":false,"rich_tooltip":true,"showTooltipTotal":true,"showTooltipPercentage":false,"tooltipSortByMetric":false,"tooltipTimeFormat":"smart_date","y_axis_format":".2%","logAxis":false,"minorSplitLine":false,"truncateXAxis":true,"truncateYAxis":false,"echart_options":"{}","extra_form_data":{},"dashboards":[10],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 64013855-e444-4747-a045-8bfbed6f4341
+version: 1.0.0
+dataset_uuid: a583f928-1b07-4551-8581-661b93059dcd

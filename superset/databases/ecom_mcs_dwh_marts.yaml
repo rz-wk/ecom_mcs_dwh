@@ -1,0 +1,15 @@
+database_name: ecom_mcs_dwh_marts
+sqlalchemy_uri: clickhousedb+connect://XXXX:XXXXXXXXXX@localhost:8123/ecom_mcs_dwh_marts
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+impersonate_user: false
+configuration_method: dynamic_form
+uuid: 0f89f7f1-906b-47b1-a51e-4849829aa9ed
+version: 1.0.0

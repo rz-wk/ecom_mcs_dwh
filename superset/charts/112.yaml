@@ -1,0 +1,70 @@
+slice_name: "\u041E\u0431\u0449\u0430\u044F \u0432\u044B\u0440\u0443\u0447\u043A\u0430"
+description: 'KPI: Revenue'
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 26__table
+  viz_type: big_number
+  slice_id: 112
+  matrixify_enable: false
+  matrixify_mode_columns: disabled
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_all_sort_by_columns: a_to_z
+  matrixify_topn_order_columns: true
+  matrixify_show_column_headers: true
+  matrixify_fit_columns_dynamically: true
+  matrixify_mode_rows: disabled
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_all_sort_by_rows: a_to_z
+  matrixify_topn_order_rows: true
+  matrixify_show_row_labels: true
+  matrixify_row_height: 300
+  matrixify_charts_per_row: 4
+  matrixify_cell_title_template: ''
+  x_axis: purchase_date
+  time_grain_sqla: P1D
+  aggregation: LAST_VALUE
+  metric: sum_revenue
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: purchase_date
+  show_timestamp: false
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  subtitle_font_size: 0.15
+  show_metric_name: false
+  show_x_axis: false
+  show_y_axis: false
+  y_axis_format: ',d'
+  time_format: smart_date
+  force_timestamp_formatting: false
+  rolling_type: None
+  extra_form_data: {}
+  dashboards:
+  - 10
+query_context: '{"datasource":{"id":26,"type":"table"},"force":false,"queries":[{"filters":[{"col":"purchase_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1D","columnType":"BASE_AXIS","sqlExpression":"purchase_date","label":"purchase_date","expressionType":"SQL","isColumnReference":true}],"metrics":["sum_revenue"],"annotation_layers":[],"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"pivot","options":{"index":["purchase_date"],"columns":[],"aggregates":{"sum_revenue":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"26__table","viz_type":"big_number","slice_id":112,"matrixify_enable":false,"matrixify_mode_columns":"disabled","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_all_sort_by_columns":"a_to_z","matrixify_topn_order_columns":true,"matrixify_show_column_headers":true,"matrixify_fit_columns_dynamically":true,"matrixify_mode_rows":"disabled","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_all_sort_by_rows":"a_to_z","matrixify_topn_order_rows":true,"matrixify_show_row_labels":true,"matrixify_row_height":300,"matrixify_charts_per_row":4,"matrixify_cell_title_template":"","x_axis":"purchase_date","time_grain_sqla":"P1D","aggregation":"LAST_VALUE","metric":"sum_revenue","adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","expressionType":"SIMPLE","operator":"TEMPORAL_RANGE","subject":"purchase_date"}],"show_timestamp":false,"show_trend_line":true,"start_y_axis_at_zero":true,"color_picker":{"a":1,"b":135,"g":122,"r":0},"header_font_size":0.4,"subheader_font_size":0.15,"subtitle_font_size":0.15,"show_metric_name":false,"show_x_axis":false,"show_y_axis":false,"y_axis_format":",d","time_format":"smart_date","force_timestamp_formatting":false,"rolling_type":"None","extra_form_data":{},"dashboards":[10],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 9f6fd60a-34fa-43c8-917b-f34b5002f672
+version: 1.0.0
+dataset_uuid: ac291407-351f-4810-94c0-e2f23bba45ca

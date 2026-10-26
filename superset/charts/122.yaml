@@ -1,0 +1,106 @@
+slice_name: "\u0414\u0438\u043D\u0430\u043C\u0438\u043A\u0430 \u043F\u043E\u043A\u0443\
+  \u043F\u043E\u043A"
+description: 'Sales: Purchases Dynamics'
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 26__table
+  viz_type: echarts_timeseries_line
+  slice_id: 122
+  matrixify_enable: false
+  matrixify_mode_columns: disabled
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_all_sort_by_columns: a_to_z
+  matrixify_topn_order_columns: true
+  matrixify_show_column_headers: true
+  matrixify_fit_columns_dynamically: true
+  matrixify_mode_rows: disabled
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_all_sort_by_rows: a_to_z
+  matrixify_topn_order_rows: true
+  matrixify_show_row_labels: true
+  matrixify_row_height: 300
+  matrixify_charts_per_row: 4
+  matrixify_cell_title_template: ''
+  x_axis: purchase_date
+  time_grain_sqla: P1D
+  xAxisForceCategorical: false
+  x_axis_sort_asc: true
+  metrics:
+  - sum_purchase_count
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: purchase_date
+  group_others_when_limit_reached: false
+  order_desc: true
+  row_limit: 50000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastEnabled: false
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title: ''
+  x_axis_title_margin: 0
+  y_axis_title: ''
+  y_axis_title_margin: 0
+  y_axis_title_position: Left
+  sort_series_type: sum
+  sort_series_ascending: false
+  color_scheme: supersetColors
+  time_shift_color: true
+  show_value: false
+  only_total: true
+  percentage_threshold: 0
+  area: false
+  opacity: 0.2
+  markerEnabled: false
+  markerSize: 6
+  zoomable: false
+  minorTicks: false
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  x_axis_number_format: ~g
+  xAxisLabelRotation: 0
+  xAxisLabelInterval: auto
+  force_max_interval: false
+  rich_tooltip: true
+  showTooltipTotal: true
+  showTooltipPercentage: false
+  tooltipSortByMetric: false
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  logAxis: false
+  minorSplitLine: false
+  truncateXAxis: true
+  truncateYAxis: false
+  y_axis_bounds:
+  - null
+  - null
+  echart_options: '{}'
+  extra_form_data: {}
+  dashboards:
+  - 10
+query_context: '{"datasource":{"id":26,"type":"table"},"force":false,"queries":[{"filters":[{"col":"purchase_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1D","columnType":"BASE_AXIS","sqlExpression":"purchase_date","label":"purchase_date","expressionType":"SQL","isColumnReference":true}],"metrics":["sum_purchase_count"],"orderby":[["sum_purchase_count",false]],"annotation_layers":[],"row_limit":50000,"series_columns":[],"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["purchase_date"],"columns":[],"aggregates":{"sum_purchase_count":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"26__table","viz_type":"echarts_timeseries_line","slice_id":122,"matrixify_enable":false,"matrixify_mode_columns":"disabled","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_all_sort_by_columns":"a_to_z","matrixify_topn_order_columns":true,"matrixify_show_column_headers":true,"matrixify_fit_columns_dynamically":true,"matrixify_mode_rows":"disabled","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_all_sort_by_rows":"a_to_z","matrixify_topn_order_rows":true,"matrixify_show_row_labels":true,"matrixify_row_height":300,"matrixify_charts_per_row":4,"matrixify_cell_title_template":"","x_axis":"purchase_date","time_grain_sqla":"P1D","xAxisForceCategorical":false,"x_axis_sort_asc":true,"metrics":["sum_purchase_count"],"groupby":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","expressionType":"SIMPLE","operator":"TEMPORAL_RANGE","subject":"purchase_date"}],"group_others_when_limit_reached":false,"order_desc":true,"row_limit":50000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastEnabled":false,"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title":"","x_axis_title_margin":0,"y_axis_title":"","y_axis_title_margin":0,"y_axis_title_position":"Left","sort_series_type":"sum","sort_series_ascending":false,"color_scheme":"supersetColors","time_shift_color":true,"show_value":false,"only_total":true,"percentage_threshold":0,"area":false,"opacity":0.2,"markerEnabled":false,"markerSize":6,"zoomable":false,"minorTicks":false,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","x_axis_number_format":"~g","xAxisLabelRotation":0,"xAxisLabelInterval":"auto","force_max_interval":false,"rich_tooltip":true,"showTooltipTotal":true,"showTooltipPercentage":false,"tooltipSortByMetric":false,"tooltipTimeFormat":"smart_date","y_axis_format":"SMART_NUMBER","logAxis":false,"minorSplitLine":false,"truncateXAxis":true,"truncateYAxis":false,"y_axis_bounds":[null,null],"echart_options":"{}","extra_form_data":{},"dashboards":[10],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: b5883ad6-8d03-498f-a3c4-f1eea2e393ff
+version: 1.0.0
+dataset_uuid: ac291407-351f-4810-94c0-e2f23bba45ca

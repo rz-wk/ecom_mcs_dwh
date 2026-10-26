@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS ecom_mcs_dwh_core;
